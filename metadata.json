@@ -1,0 +1,7 @@
+{
+  "name": "Global Famous Food Map",
+  "description": "Discover famous local foods and the best restaurants serving them in any city.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  .dark {
+    color-scheme: dark;
+  }
+
+  /* ✅ FIX: Added #root so entire screen background changes in dark mode */
+  html, body, #root {
+    @apply font-sans bg-zinc-50 dark:bg-zinc-950 transition-colors duration-300;
+    min-height: 100%;
+  }
+
+  /* ✅ FIX: Ensure html itself gets the dark background immediately on class toggle */
+  html.dark {
+    background-color: rgb(9 9 11); /* zinc-950 */
+  }
+}
+
+/* Custom Map Marker Styles */
+.custom-food-marker {
+  background: none !important;
+  border: none !important;
+}
+
+.user-location-marker {
+  background: none !important;
+  border: none !important;
+}
+
+.leaflet-popup-content-wrapper {
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: 1rem !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  width: auto !important;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
