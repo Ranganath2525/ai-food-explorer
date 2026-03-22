@@ -11,7 +11,7 @@
     "lint": "tsc --noEmit"
   },
   "npmOptions": {
-  "legacy-peer-deps": true
+    "legacy-peer-deps": true
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
@@ -33,7 +33,6 @@
     "nodemailer": "^8.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-leaflet": "^4.2.1",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.13.1",
     "tailwind-merge": "^3.5.0",
